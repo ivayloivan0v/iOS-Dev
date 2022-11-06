@@ -16,29 +16,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54E-kX-fAL">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54E-kX-fAL">
                                 <rect key="frame" x="84.666666666666686" y="244" width="224" height="114"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="US"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wOh-HH-PiO"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jw7-sF-ucV">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jw7-sF-ucV">
                                 <rect key="frame" x="84.666666666666686" y="388" width="224" height="114"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="US"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a50-Yg-DA0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9R9-gq-MUD">
                                 <rect key="frame" x="84.666666666666686" y="103" width="224" height="114"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="US"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="32h-ZE-xyX"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Round 1 of 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOI-GH-lyB">
+                                <rect key="frame" x="96" y="585" width="200" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Jw7-sF-ucV" firstAttribute="centerX" secondItem="54E-kX-fAL" secondAttribute="centerX" id="33G-na-IwN"/>
+                            <constraint firstItem="xOI-GH-lyB" firstAttribute="top" secondItem="Jw7-sF-ucV" secondAttribute="bottom" constant="82" id="8nS-mg-MwX"/>
                             <constraint firstItem="Jw7-sF-ucV" firstAttribute="top" secondItem="54E-kX-fAL" secondAttribute="bottom" constant="30" id="NjJ-0g-FR1"/>
                             <constraint firstItem="9R9-gq-MUD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NrQ-jh-9Q1"/>
                             <constraint firstItem="54E-kX-fAL" firstAttribute="centerX" secondItem="9R9-gq-MUD" secondAttribute="centerX" id="UNA-A5-urS"/>
+                            <constraint firstItem="xOI-GH-lyB" firstAttribute="centerX" secondItem="Jw7-sF-ucV" secondAttribute="centerX" id="jtG-5t-LA0"/>
                             <constraint firstItem="9R9-gq-MUD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kzJ-au-Qa6"/>
                             <constraint firstItem="54E-kX-fAL" firstAttribute="top" secondItem="9R9-gq-MUD" secondAttribute="bottom" constant="27" id="u6c-OX-CXy"/>
                         </constraints>
@@ -48,11 +65,12 @@
                         <outlet property="button1" destination="9R9-gq-MUD" id="Sit-kI-qBh"/>
                         <outlet property="button2" destination="54E-kX-fAL" id="qA3-AW-EJd"/>
                         <outlet property="button3" destination="Jw7-sF-ucV" id="uod-OW-kC1"/>
+                        <outlet property="scoreText" destination="xOI-GH-lyB" id="b4t-cY-Ijq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057.2519083969464" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="1052.6717557251909" y="-34.507042253521128"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dlN-mh-WUB">
